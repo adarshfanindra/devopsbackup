@@ -1,0 +1,7 @@
+[user]
+	name = adarsh
+	email = adarsh7272@gmail.com
+[core]
+	editor = /usr/bin/vim
+[colour]
+	ui = true

@@ -1,0 +1,23 @@
+#!/bin/bash
+# /etc/init.d/httpd
+#
+# Path to the apachectl script, server binary, and short-form for messages. 
+apachectl=/usr/local/apache2/bin/apachectl 
+httpd=/usr/local/apache2/bin/httpd 
+pid=/usr/local/apache2/logs/httpd.pid 
+prog=httpd 
+RETVAL=0
+
+start() {
+    echo -n $"Starting $prog: "
+    $apachectl -k start
+    RETVAL=$?
+    echo
+    return $RETVAL
+}
+stop() {
+    echo -n $"Stopping $prog: "
+    $apachectl -k stop
+    RETVAL=$?
+    echo
+}

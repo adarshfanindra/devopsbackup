@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo "==============================="
+echo "Installing PHP 7"
+echo "==============================="
+sudo yum install php70
+
+echo "==============================="
+echo "Installing PHP 7 additional commonly used php packages"
+echo "==============================="
+sudo yum install php70-gd
+sudo yum install php70-imap
+sudo yum install php70-mbstring
+sudo yum install php70-mysqlnd
+sudo yum install php70-opcache
+sudo yum install php70-pecl-apcu
+
+echo "==============================="
+echo "Linking PHP 7"
+echo "==============================="
+sudo ln -sf /etc/httpd/conf.d/php-conf.7.0 /etc/alternatives/php.conf
+sudo ln -sf /etc/httpd/conf.modules.d/15-php-conf.7.0 /etc/alternatives/10-php.conf
+
+echo "==============================="
+echo "Choose PHP 7 as an Alternative"
+echo "==============================="
+sudo alternatives --config php

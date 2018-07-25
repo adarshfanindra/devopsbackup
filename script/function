@@ -1,0 +1,17 @@
+#FUNCTION IS LABEL GIVEN TO SET OF COMMANDS
+
+	#FUNCTION 1
+	goodmorning()
+{
+	echo "Welcome to Shell Scripting"
+	echo "Good Morning, Today is"
+	date
+}
+
+	#FUNCTION 2	
+	takebackup()
+{
+	echo "Taking Backup of $1 directory"
+	
+	echo "Backup Completed Successfully!!"
+}
